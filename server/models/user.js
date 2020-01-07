@@ -13,7 +13,7 @@ const userSchema = new mongoose.Schema({
 });
 
 // hash password before storing data
-userSchema.pre("save", async function(next) {
+userSchema.pre("save", function(next) {
     try {
         let user = this;
 
@@ -26,8 +26,7 @@ userSchema.pre("save", async function(next) {
         bcrypt.genSalt(10, function(err, salt) {
             bcrypt.hash(user.password, salt, function(err, hash) {
                 user.password = hash;
-                console.log("hashed: " + hash);
-                return next();
+                next();
             });
         });
 
