@@ -24,9 +24,10 @@ userSchema.pre("save", async function(next) {
 
         // hash the password
         bcrypt.genSalt(10, function(err, salt) {
-            bcrypt.hash(user.password, salt, null, function(err, hash) {
+            bcrypt.hash(user.password, salt, function(err, hash) {
                 user.password = hash;
-                next();
+                console.log("hashed: " + hash);
+                return next();
             });
         });
 
