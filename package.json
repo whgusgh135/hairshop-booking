@@ -4,9 +4,14 @@
   "description": "hairshop booking app",
   "main": "index.js",
   "scripts": {
-    "start": "node server/index.js",
+    "start-server": "node server/index.js",
+    "start-client": "react-scripts start",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "starttt": "react-scripts start"
+    "run:sass": "node-sass src/styles/sass/main.scss src/styles/css/style.css",
+    "compile:sass": "node-sass src/styles/sass/main.scss src/styles/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" src/styles/css/style.comp.css -o src/styles/css/style.prefix.css",
+    "compress:css": "node-sass src/styles/css/style.prefix.css src/styles/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css",
   },
   "author": "",
   "license": "ISC",
@@ -31,5 +36,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.0"
   }
 }
