@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/index.js",
+    "server": "nodemon server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "starttt": "react-scripts start"
+    "client": "react-scripts start"
   },
   "author": "",
   "license": "ISC",
@@ -31,5 +32,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.18.0",
+    "nodemon": "^2.0.2"
   }
 }
