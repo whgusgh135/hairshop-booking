@@ -1,0 +1,26 @@
+.navbar {
+
+  .navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $pg-color-white;
+    background-color: $pg-color-grey-extra-dark;
+    height: 80px;
+  }
+
+  .navbar__links-section {
+    display: flex;
+  }
+
+  .navbar__link {
+    padding: 3px 10px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    &:hover {
+      color: $pg-color-grey-extra-light;
+    }
+  }
+}
