@@ -1,8 +1,8 @@
 # hairshop-booking
 
 1. 'npm install' to install all libraries
-2. 'npm run starttt' to start frontend - https://localhost:3000 // TODO: change this script name
-3. 'npm start' to run backend api - https://localhost:3001/
+2. 'npm run start-client' to start frontend - https://localhost:3000
+3. 'npm run start-server' to run backend api - https://localhost:3001/
 
 4. To setup database on dev environment: 
     - create a database in mlab
