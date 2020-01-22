@@ -1,19 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default class Navbar extends React.Component {
 
     render() {
         return (
-            <nav className="navbar__container">
-                <ul className="navbar__links-section">
-                    <li className="navbar__link">Home</li>
-                    <li className="navbar__link">About</li>
-                    <li className="navbar__link">Book Online</li>
-                    <li className="navbar__link">Our Products</li>
-                    <li className="navbar__link">Our Services</li>
-                    <li className="navbar__link">Contact Us</li>
-                </ul>
-            </nav>
+            <div className="navbar">
+                <nav className="navbar__container">
+                    <div className="navbar__logo-section">
+                        <Link to="/" className="navbar__logo">Some logo</Link>
+                    </div>
+                    <div className="navbar__links-section">
+                        <Link to="/" className="navbar__link">Home</Link>
+                        <Link to="/about" className="navbar__link">About</Link>
+                        <Link to="/book" className="navbar__link">Book Online</Link>
+                        <Link to="/products" className="navbar__link">Our Products</Link>
+                        <Link to="/services" className="navbar__link">Our Services</Link>
+                        <Link to="/contact"className="navbar__link">Contact Us</Link>
+                    </div>
+                </nav>
+            </div>
         )
     }
 }

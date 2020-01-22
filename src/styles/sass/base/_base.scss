@@ -10,19 +10,24 @@ html {
   // defines base font as 10px = 1rem
   font-size: 62.5%;
 
-  @include respond($pg-md) {
+  @include respond(pg-md) {
     font-size: 50%; // 1 rem = 8px
   }
 
-  @include respond($pg-lg) {
+  @include respond(pg-lg) {
     font-size: 56.25%; // 1 rem = 9px
   }
 
-  @include respond($pg-xl) {
+  @include respond(pg-xl) {
     font-size: 75%; // 1 rem = 12px
   }
 }
 
 body {
   box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }

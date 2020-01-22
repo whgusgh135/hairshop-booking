@@ -12,3 +12,10 @@
     - create a dev.js file on server/config folder
     - write exports.DB_URI = "your MongoDB URI";
     - You are good to go :D
+
+5. To compile scss
+    - 'npm run run:sass' to build css from scss
+    - 'npm run compile:sass' to build compiled css from scss
+    - 'npm run prefix:css' to build css with prefix properties to work with last 10 versions of browsers from compiled css
+    - 'npm run compress:css' to build compressed css from prefixed css
+    - 'npm run build:css' to run all css build function all together to give final css
